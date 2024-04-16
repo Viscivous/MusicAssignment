@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpycxfii3thf6"]
+
+[ext_resource type="Texture2D" uid="uid://dvsl64rf06cik" path="res://piano.png" id="1_b0rpq"]
+[ext_resource type="Texture2D" uid="uid://eix2gijgoh28" path="res://bongos.png" id="2_25fq1"]
+[ext_resource type="Texture2D" uid="uid://cro30ribrl3j5" path="res://maracas.png" id="3_1nlyy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Piano" type="Sprite2D" parent="."]
+position = Vector2(572.625, 166.438)
+scale = Vector2(0.134344, 0.0834845)
+texture = ExtResource("1_b0rpq")
+
+[node name="Bongos" type="Sprite2D" parent="."]
+position = Vector2(222.5, 463)
+scale = Vector2(0.9275, 0.969697)
+texture = ExtResource("2_25fq1")
+
+[node name="Maracas" type="Sprite2D" parent="."]
+position = Vector2(547.25, 466.25)
+scale = Vector2(0.2315, 0.2815)
+texture = ExtResource("3_1nlyy")
