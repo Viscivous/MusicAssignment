@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca2smmqhwgq3a"
-path="res://.godot/imported/maracas.png-89aa145dd64a360cf679a7dc418ecfa9.ctex"
+uid="uid://cgslkujnsyqub"
+path="res://.godot/imported/bongos.png-eb22fab9b3d4d9eeb240379f6d31d4fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maracas.png"
-dest_files=["res://.godot/imported/maracas.png-89aa145dd64a360cf679a7dc418ecfa9.ctex"]
+source_file="res://instruments/bongos.png"
+dest_files=["res://.godot/imported/bongos.png-eb22fab9b3d4d9eeb240379f6d31d4fe.ctex"]
 
 [params]
 

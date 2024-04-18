@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btcaagbcfdb2n"
-path="res://.godot/imported/piano.png-2f2330bef85ece2ba72b62a3277ece78.ctex"
+uid="uid://ca2smmqhwgq3a"
+path="res://.godot/imported/maracas.png-fae95c7a0ec772d1c98af1239b48357d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://piano.png"
-dest_files=["res://.godot/imported/piano.png-2f2330bef85ece2ba72b62a3277ece78.ctex"]
+source_file="res://instruments/maracas.png"
+dest_files=["res://.godot/imported/maracas.png-fae95c7a0ec772d1c98af1239b48357d.ctex"]
 
 [params]
 

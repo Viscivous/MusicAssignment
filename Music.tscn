@@ -1,15 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://lcajg11bmpja"]
+[gd_scene load_steps=8 format=3 uid="uid://lcajg11bmpja"]
 
-[ext_resource type="Texture2D" uid="uid://btcaagbcfdb2n" path="res://piano.png" id="1_ghout"]
-[ext_resource type="Texture2D" uid="uid://cgslkujnsyqub" path="res://bongos.png" id="2_yy0xc"]
-[ext_resource type="Texture2D" uid="uid://ca2smmqhwgq3a" path="res://maracas.png" id="3_oserc"]
+[ext_resource type="Texture2D" uid="uid://btcaagbcfdb2n" path="res://instruments/piano.png" id="1_ghout"]
+[ext_resource type="Script" path="res://Music.gd" id="1_k582y"]
+[ext_resource type="AudioStream" uid="uid://bb08ijagjx53n" path="res://audio/Piano C.wav" id="2_du2qb"]
+[ext_resource type="Texture2D" uid="uid://cgslkujnsyqub" path="res://instruments/bongos.png" id="2_yy0xc"]
+[ext_resource type="Texture2D" uid="uid://ca2smmqhwgq3a" path="res://instruments/maracas.png" id="3_oserc"]
+[ext_resource type="AudioStream" uid="uid://dccfpgbue64gu" path="res://audio/Piano A.wav" id="3_tq852"]
+[ext_resource type="AudioStream" uid="uid://bxpofpc76u34i" path="res://audio/Piano B.wav" id="4_wqs77"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_k582y")
 
 [node name="Piano" type="Sprite2D" parent="."]
 position = Vector2(948.125, 283.313)
 scale = Vector2(0.221969, 0.121511)
 texture = ExtResource("1_ghout")
+
+[node name="Button" type="Button" parent="Piano"]
+offset_left = -1662.96
+offset_top = 647.571
+offset_right = -1162.96
+offset_bottom = 1659.57
+
+[node name="PianoC" type="AudioStreamPlayer" parent="Piano/Button"]
+stream = ExtResource("2_du2qb")
+
+[node name="Button2" type="Button" parent="Piano"]
+offset_left = -2789.24
+offset_top = 655.801
+offset_right = -2289.24
+offset_bottom = 1667.8
+
+[node name="PianoA" type="AudioStreamPlayer" parent="Piano/Button2"]
+stream = ExtResource("3_tq852")
+
+[node name="Button3" type="Button" parent="Piano"]
+offset_left = -2226.1
+offset_top = 655.801
+offset_right = -1726.1
+offset_bottom = 1667.8
+
+[node name="PianoB" type="AudioStreamPlayer" parent="Piano/Button3"]
+stream = ExtResource("4_wqs77")
 
 [node name="Bongos" type="Sprite2D" parent="."]
 position = Vector2(299, 772)
@@ -19,3 +51,7 @@ texture = ExtResource("2_yy0xc")
 position = Vector2(877, 785)
 scale = Vector2(0.391, 0.4215)
 texture = ExtResource("3_oserc")
+
+[connection signal="pressed" from="Piano/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Piano/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Piano/Button3" to="." method="_on_button_3_pressed"]
