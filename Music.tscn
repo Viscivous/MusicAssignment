@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://lcajg11bmpja"]
+[gd_scene load_steps=18 format=3 uid="uid://lcajg11bmpja"]
 
 [ext_resource type="Texture2D" uid="uid://btcaagbcfdb2n" path="res://instruments/piano.png" id="1_ghout"]
 [ext_resource type="Script" path="res://Music.gd" id="1_k582y"]
@@ -7,6 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://ca2smmqhwgq3a" path="res://instruments/maracas.png" id="3_oserc"]
 [ext_resource type="AudioStream" uid="uid://dccfpgbue64gu" path="res://audio/Piano A.wav" id="3_tq852"]
 [ext_resource type="AudioStream" uid="uid://bxpofpc76u34i" path="res://audio/Piano B.wav" id="4_wqs77"]
+[ext_resource type="AudioStream" uid="uid://bcpysp2ti5mia" path="res://audio/Piano D.wav" id="6_dx6yy"]
+[ext_resource type="AudioStream" uid="uid://bjf0gnhew4q2t" path="res://audio/Piano E.wav" id="7_lwm8s"]
+[ext_resource type="AudioStream" uid="uid://yjcioavn573g" path="res://audio/Piano F.wav" id="8_jg746"]
+[ext_resource type="AudioStream" uid="uid://c3n48dt6wq775" path="res://audio/Piano G.wav" id="9_atlpp"]
+[ext_resource type="AudioStream" uid="uid://758i6qpdbn56" path="res://audio/Piano C#.wav" id="10_0ssss"]
+[ext_resource type="AudioStream" uid="uid://bulsfp8jjo1bi" path="res://audio/Maracas.wav" id="10_ab1q6"]
+[ext_resource type="AudioStream" uid="uid://ycvvnctsnyeg" path="res://audio/Piano F#.wav" id="11_d2qa2"]
+[ext_resource type="AudioStream" uid="uid://d1w7ohhq4k6k1" path="res://audio/Piano G#.wav" id="12_0wwpi"]
+[ext_resource type="AudioStream" uid="uid://cbqkq1dvqr03c" path="res://audio/BongosL.mp3" id="14_2nxx5"]
+[ext_resource type="AudioStream" uid="uid://wy176g3wgg26" path="res://audio/BongosR.mp3" id="15_ybaqo"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_k582y")
@@ -43,15 +53,115 @@ offset_bottom = 1667.8
 [node name="PianoB" type="AudioStreamPlayer" parent="Piano/Button3"]
 stream = ExtResource("4_wqs77")
 
+[node name="Button4" type="Button" parent="Piano"]
+offset_left = -1090.81
+offset_top = 664.03
+offset_right = -590.805
+offset_bottom = 1676.03
+
+[node name="PianoD" type="AudioStreamPlayer" parent="Piano/Button4"]
+stream = ExtResource("6_dx6yy")
+
+[node name="Button5" type="Button" parent="Piano"]
+offset_left = -527.664
+offset_top = 664.03
+offset_right = -27.6635
+offset_bottom = 1676.03
+
+[node name="PianoE" type="AudioStreamPlayer" parent="Piano/Button5"]
+stream = ExtResource("7_lwm8s")
+
+[node name="Button6" type="Button" parent="Piano"]
+offset_left = 35.4781
+offset_top = 664.03
+offset_right = 535.478
+offset_bottom = 1676.03
+
+[node name="PianoF" type="AudioStreamPlayer" parent="Piano/Button6"]
+stream = ExtResource("8_jg746")
+
+[node name="Button7" type="Button" parent="Piano"]
+offset_left = 598.62
+offset_top = 664.03
+offset_right = 1098.62
+offset_bottom = 1676.03
+
+[node name="PianoG" type="AudioStreamPlayer" parent="Piano/Button7"]
+stream = ExtResource("9_atlpp")
+
+[node name="Button8" type="Button" parent="Piano"]
+offset_left = -1446.71
+offset_top = -1730.81
+offset_right = -946.711
+offset_bottom = 557.186
+
+[node name="PianoC2" type="AudioStreamPlayer" parent="Piano/Button8"]
+stream = ExtResource("10_0ssss")
+
+[node name="Button9" type="Button" parent="Piano"]
+offset_left = 220.189
+offset_top = -1730.81
+offset_right = 720.189
+offset_bottom = 557.186
+
+[node name="PianoF2" type="AudioStreamPlayer" parent="Piano/Button9"]
+stream = ExtResource("11_d2qa2")
+
+[node name="Button10" type="Button" parent="Piano"]
+offset_left = -3073.06
+offset_top = -1730.81
+offset_right = -2573.06
+offset_bottom = 557.186
+
+[node name="PianoG2" type="AudioStreamPlayer" parent="Piano/Button10"]
+stream = ExtResource("12_0wwpi")
+
 [node name="Bongos" type="Sprite2D" parent="."]
 position = Vector2(299, 772)
 texture = ExtResource("2_yy0xc")
+
+[node name="Button12" type="Button" parent="Bongos"]
+offset_left = -179.0
+offset_top = -104.0
+offset_right = 3.0
+offset_bottom = 24.0
+
+[node name="BongosL" type="AudioStreamPlayer" parent="Bongos/Button12"]
+stream = ExtResource("14_2nxx5")
+
+[node name="Button13" type="Button" parent="Bongos"]
+offset_left = 12.0
+offset_top = -103.0
+offset_right = 178.0
+offset_bottom = 25.0
+
+[node name="BongosR" type="AudioStreamPlayer" parent="Bongos/Button13"]
+stream = ExtResource("15_ybaqo")
 
 [node name="Maracas" type="Sprite2D" parent="."]
 position = Vector2(877, 785)
 scale = Vector2(0.391, 0.4215)
 texture = ExtResource("3_oserc")
 
+[node name="Button11" type="Button" parent="Maracas"]
+offset_left = -263.0
+offset_top = -510.0
+offset_right = 277.0
+offset_bottom = 493.0
+
+[node name="MaracaShake" type="AudioStreamPlayer" parent="Maracas/Button11"]
+stream = ExtResource("10_ab1q6")
+
 [connection signal="pressed" from="Piano/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Piano/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Piano/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Piano/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Piano/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Piano/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Piano/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Piano/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Piano/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="Piano/Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="Bongos/Button12" to="." method="_on_button_12_pressed"]
+[connection signal="pressed" from="Bongos/Button13" to="." method="_on_button_13_pressed"]
+[connection signal="pressed" from="Maracas/Button11" to="." method="_on_button_11_pressed"]
