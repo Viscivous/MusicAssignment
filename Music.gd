@@ -51,3 +51,8 @@ func _on_button_12_pressed():
 
 func _on_button_13_pressed():
 	$Bongos/Button13/BongosR.play()
+
+
+
+func _on_button_14_pressed():
+	$Tambourine/Button14/Tambo.play()

@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bulsfp8jjo1bi"
-path="res://.godot/imported/Maracas.wav-0eb11547f5584e514df3f5c7e5774f2c.sample"
+uid="uid://c2tlwp22oymxt"
+path="res://.godot/imported/BongosL.wav-e6d457cff8c9b6e3f7a05aed374b65ef.sample"
 
 [deps]
 
-source_file="res://audio/Maracas.wav"
-dest_files=["res://.godot/imported/Maracas.wav-0eb11547f5584e514df3f5c7e5774f2c.sample"]
+source_file="res://audio/BongosL.wav"
+dest_files=["res://.godot/imported/BongosL.wav-e6d457cff8c9b6e3f7a05aed374b65ef.sample"]
 
 [params]
 

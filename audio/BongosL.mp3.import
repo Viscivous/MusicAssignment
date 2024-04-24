@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/BongosL.mp3-97cb869dedf517c0241c36ad31da043d.
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
